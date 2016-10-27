@@ -193,5 +193,5 @@ bar {
 }
 
 bindsym $mod+d exec rofi -show run
-exec_always feh --bg-fill $HOME/.config/i3/download.jpe
+exec_always --no-startup-id feh --bg-fill $HOME/.config/i3/wallhaven-107498.jpg
 exec --no-startup-id compton -f

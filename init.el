@@ -67,7 +67,8 @@
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (add-hook 'scheme-mode-hook 'smartparens-mode)
-(add-hook 'inferior-scheme-mode-hook 'smartparens-mode)
+;;(add-hook 'inferior-scheme-mode-hook 'smartparens-mode)
+(add-hook 'inferior-scheme-mode-hook (quote smartparens-mode))
 (add-hook 'inferior-scheme-mode-hook (lambda () (linum-mode 0)))
 
 (ivy-mode 1)
@@ -167,7 +168,7 @@
     (call-interactively 'run-scheme)
     (end-of-buffer)
     (insert "(load \""current-file-name"\")")))
-(global-set-key (kbd "<f5>") 'file-run-scheme)
+(global-set-key (kbd "<f5>") (quote file-run-scheme))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
